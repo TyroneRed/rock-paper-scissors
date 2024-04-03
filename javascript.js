@@ -42,16 +42,14 @@ function tallyResults(results){
 
 
 
-function playGame(){
-    for(let i = 0; i < 5; i++){
-        let playerSelection = prompt("Choose rock, paper or scissors: ").trim().toLowerCase();
+function playGame(playerSelection){
+    
 
 
-
-        while (!choices.includes(playerSelection)) {
-            console.log("That is not an option, try again.");
-            playerSelection = prompt("Choose rock, paper or scissors: ").trim().toLowerCase();
-         }  
+        // while (!choices.includes(playerSelection)) {
+        //     console.log("That is not an option, try again.");
+        //     playerSelection = prompt("Choose rock, paper or scissors: ").trim().toLowerCase();
+        //  }  
         
         computerSelection = getComputerChoice();
 
@@ -59,8 +57,16 @@ function playGame(){
         results = playRound(playerSelection, computerSelection)
         tallyResults(results);      
     
-    }
-}
+    };
 
-playGame()
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        let playerSelection = button.textContent.toLowerCase();
+        console.log(playerSelection);
+        playGame(playerSelection);
+        }); 
+    });
+
 console.log("Results:  Wins-" + wins + " Losses-" + losses + " Ties-" + ties);
