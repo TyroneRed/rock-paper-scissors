@@ -53,7 +53,7 @@ div {
 }
 
 #winner {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
 }
 
@@ -67,4 +67,11 @@ div {
     color:rgb(30,111,143);
     line-height: 1.6;
     font-weight: bolder;
+}
+
+button:active{
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+         box-shadow: inset 0px 0px 5px #c1c1c1;
+
 }
