@@ -42,6 +42,8 @@ function tallyResults(results){
 
 
 
+ 
+
 function playGame(playerSelection){
     
 
@@ -52,12 +54,16 @@ function playGame(playerSelection){
         //  }  
         
         computerSelection = getComputerChoice();
-
+     
+        
+ 
         console.log("You chose " + playerSelection + ", Computer chose " + computerSelection)
-        results = playRound(playerSelection, computerSelection)
+        results = playRound(playerSelection, computerSelection);
         tallyResults(results);      
     
     };
+
+
 
 
 const buttons = document.querySelectorAll('button');
@@ -68,5 +74,6 @@ buttons.forEach((button) => {
         playGame(playerSelection);
         }); 
     });
+
 
 console.log("Results:  Wins-" + wins + " Losses-" + losses + " Ties-" + ties);
