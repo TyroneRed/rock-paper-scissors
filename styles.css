@@ -1,5 +1,4 @@
 *{
-    font-size: 20;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -17,7 +16,7 @@ button{
     height: 150px;
     width: 150px;
     border-radius: 100%;
-    font-size: 28px;
+    font-size: 1.5em;
     color: white;
     font-weight: bolder;
     border: none;
