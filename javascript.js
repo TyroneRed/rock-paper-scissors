@@ -2,14 +2,11 @@ const choices=["rock", "paper", "scissors"];
 let wins =0, ties = 0 , losses = 0;
 
 function getComputerChoice() {
-
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
 
 function playRound(playerSelection, computerSelection) {
-    
-    
     
     if (playerSelection == computerSelection){
         console.log("Tie!");
@@ -27,31 +24,31 @@ function playRound(playerSelection, computerSelection) {
         return 'win';
 
     }
+    
 }
 
 function tallyResults(results){
-    if (results == 'win') {
+
+    if(results == 'win') {
         wins += 1;
-    }
-    if (results == "loss"){
+    }else if(results == "loss"){
         losses += 1;
-    }
-    if (results == 'tie'){
+    }else if(results == 'tie'){
         ties += 1;
-    }}
-
-
-
- 
-
-function playGame(playerSelection){
+    }    
+    let total = wins + losses + ties
+    if (total == 5){
+        gameOver();
+    }
+    
+    console.log("Results:  Wins-" + wins + " Losses-" + losses + " Ties-" + ties);
+};    
+    
     
 
 
-        // while (!choices.includes(playerSelection)) {
-        //     console.log("That is not an option, try again.");
-        //     playerSelection = prompt("Choose rock, paper or scissors: ").trim().toLowerCase();
-        //  }  
+function playGame(playerSelection){
+    
         
         computerSelection = getComputerChoice();
      
@@ -63,12 +60,21 @@ function playGame(playerSelection){
     
     };
 
-
+function gameOver(){
+    // buttons.forEach((button) => {
+    //     button.removeEventListener("click", clickHandler);
+    // });
+    div = document.querySelector("div")
+    finalResults = document.createElement('p')
+    finalResults.textContent = "Results:  Wins-" + wins + " Losses-" + losses + " Ties-" + ties;
+    div.appendChild(finalResults);
+    console.log("Results:  Wins-" + wins + " Losses-" + losses + " Ties-" + ties);
+};
 
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function clickHandler(){
         let playerSelection = button.textContent.toLowerCase();
         console.log(playerSelection);
         playGame(playerSelection);
