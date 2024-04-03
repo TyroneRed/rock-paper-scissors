@@ -1,0 +1,70 @@
+*{
+    font-size: 20;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#container{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 75px 0px;
+
+}
+
+button{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    font-size: 28px;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    background-color: rgb(47, 136, 172);
+ 
+
+
+}
+
+.btn-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.text-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+button:hover{
+    background-color: rgb(30, 111, 143);
+}
+
+div {
+    padding: 10px;
+}
+
+#winner {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#results {
+    font-size: 1.5em;
+}
+
+.final-results{
+    font-size: 2em;
+    text-align: center;
+    color:rgb(30,111,143);
+    line-height: 1.6;
+    font-weight: bolder;
+}
