@@ -55,7 +55,7 @@ function playGame(playerSelection){
      
         
         resultsDiv = document.querySelector("#results")
-        resultsDiv.textContent = ("You chose " + playerSelection + ", Computer chose " + computerSelection + ".");
+        resultsDiv.textContent = ("You chose " + playerSelection + ", I chose " + computerSelection + ".");
         results = playRound(playerSelection, computerSelection);
         tallyResults(results);
 
